@@ -47,13 +47,12 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  #- host: "app1.expensesite.com" # ALB Rule
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: app1 # ALB Target group
-            port:
-              number: 80
+    - http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: app1
+                port:
+                  number: 80
